@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+:root{
+    /* Theme 1 */
+
+    /* Backgrounds */
+    --t1mainBg:hsl(222, 26%, 31%);
+    --t1toggleBg:hsl(223, 31%, 20%);
+    --t1screenBg: hsl(224, 36%, 15%);
+
+    /* Keys */
+    --t1keyBg:hsl(225, 21%, 49%);
+    --t1keyShadow:hsl(224, 28%, 35%);
+    --t1red: hsl(6, 63%, 50%);
+    --t1darkRed: hsl(6, 70%, 34%);
+    --t1light_grayish_orange:hsl(30, 25%, 89%);
+    --t1grayish_orange:hsl(28, 16%, 65%);
+    --t1grayish_blue:hsl(221, 14%, 31%);
+
+    /* Text */
+    --t1very_grayish_blue:hsl(221, 14%, 31%);
+
+    /* Theme 2 */
+
+    /* Backgrounds */
+
+    --t2main-bg: hsl(0, 0%, 90%);
+    --t2toggleBg: hsl(0, 5%, 81%);
+    --t2screenBg: hsl(0, 0%, 93%);
+
+    /* Keys */
+
+    --t2keyBg: hsl(185, 42%, 37%);
+    --t2keyShadow: hsl(185, 58%, 25%);
+    --t2orange: hsl(25, 98%, 40%);
+    --t2darkOrange: hsl(25, 99%, 27%);
+    --t2grayish_yellow: hsl(45, 7%, 89%);
+    --t2grayish-orange: hsl(35, 11%, 61%);
+
+    /* Text */
+
+    --t2dark_grayish_yellow: hsl(60, 10%, 19%);
+
+    /* Theme 3 */
+
+    /* Backgrounds */
+
+    --t3mainBg: hsl(268, 75%, 9%);
+    --t3toggleBg: hsl(268, 71%, 12%);
+
+    /* Keys */
+
+    --t3keyBg: hsl(281, 89%, 26%);
+    --t3keyShadow: hsl(285, 91%, 52%);
+    --t3pureCyan: hsl(176, 100%, 44%);
+    --t3softCyan:hsl(177, 92%, 70%);
+
+    --t3dark-violet: hsl(268, 47%, 21%);
+    --t3magenta: hsl(290, 70%, 36%);
+
+    /*Text */
+
+    --t3lightyellow: hsl(52, 100%, 62%);
+    --t3dark-blue: hsl(198, 20%, 13%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan' ,  sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:var(--t1mainBg);
+
+    color: #fff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.theme-control{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-control h6{
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.theme-btn{
+    
+}
+
+.theme-btn div {
+    background-color:red;
+    height: 20px;
+    width: 50px;
+    border-radius: 30px;
+    padding: 3px;
+}
+
+ .rounded div {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.calc-body{
+    min-height: 500px;
+    /* background-color: #fff; */
+    min-width: 250px;
+}
+
+.input-field{
+    width: 100%;
+    height: 90px;
+    background-color: var(--t1screenBg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.input-field input{
+    width: 100%;
+    height: 100%;
+    color: white;
+    outline: none;
+    border:none;
+    text-align: right;
+    font-size: 32px;
+    background-color: transparent;
+}
+
+/* spinner remover */
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type = number]{
+    -moz-appearance: textfield;
+}
+
+
+.calc-btns{
+    margin: 10px 0;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap:15px;
+    background-color: var(--t1screenBg);
+    border-radius: 8px;
+}
+
+.calc-btns button{
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.reset{
+    grid-column: 1 / 3;
+    grid-row: 5 / 6 ;
+}
+
+.equal {
+    grid-column: 3 / 5;
+    grid-row: 5 / 6 ;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
