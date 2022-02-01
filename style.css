@@ -123,7 +123,7 @@ header{
 .calc-body{
     min-height: 500px;
     /* background-color: #fff; */
-    min-width: 250px;
+    max-width: 380px;
 }
 
 .input-field{
@@ -169,22 +169,65 @@ input[type = number]{
 }
 
 .calc-btns button{
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    background-color: var(--t1light_grayish_orange);
+    box-shadow: 0 3px 0 var(--t1grayish_orange);
+}
+
+.calc-btns button:active{
+    box-shadow: none;
+    top:5px;
+}
+
+.del,.reset,.equal{
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.del{
+    background-color: var(--t1keyBg);
+    box-shadow: 0 3px 0 var(--t1keyShadow);
 }
 
 .reset{
     grid-column: 1 / 3;
     grid-row: 5 / 6 ;
+    background-color: var(--t1keyBg);
+    box-shadow: 0 3px 0 var(--t1keyShadow);
 }
 
 .equal {
     grid-column: 3 / 5;
     grid-row: 5 / 6 ;
+    background-color: var(--t1red);
+    box-shadow: 0 3px 0 var(--t1darkRed);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .attribution { font-size: 11px; text-align: center; }
