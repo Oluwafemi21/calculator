@@ -21,7 +21,7 @@ equal.addEventListener('click',(e)=>{
        theme.classList.remove('home');
        theme.classList.add('theme-2')
    } else{
-      
+      theme.classList.add('theme-2');
    }
     
 });
@@ -32,7 +32,7 @@ reset.addEventListener('click',(e)=>{
        theme.classList.remove('theme-2');
        theme.classList.add('theme-3')
    } else{
-      
+      theme.classList.add('theme-3');
    }
     
 });
