@@ -19,11 +19,12 @@
     /* Text */
     --t1very_grayish_blue:hsl(221, 14%, 31%);
 
+    
     /* Theme 2 */
 
     /* Backgrounds */
 
-    --t2main-bg: hsl(0, 0%, 90%);
+    --t2mainBg: hsl(0, 0%, 90%);
     --t2toggleBg: hsl(0, 5%, 81%);
     --t2screenBg: hsl(0, 0%, 93%);
 
@@ -33,7 +34,7 @@
     --t2keyShadow: hsl(185, 58%, 25%);
     --t2orange: hsl(25, 98%, 40%);
     --t2darkOrange: hsl(25, 99%, 27%);
-    --t2grayish_yellow: hsl(45, 7%, 89%);
+    --t2grayish-yellow: hsl(45, 7%, 89%);
     --t2grayish-orange: hsl(35, 11%, 61%);
 
     /* Text */
@@ -45,7 +46,7 @@
     /* Backgrounds */
 
     --t3mainBg: hsl(268, 75%, 9%);
-    --t3toggleBg: hsl(268, 71%, 12%);
+    --t3screenBg: hsl(268, 71%, 12%);
 
     /* Keys */
 
@@ -77,18 +78,30 @@ body{
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-    background-color:var(--t1mainBg);
+}
 
+.home{
+    background-color:var(--t1mainBg);
     color: #fff;
+}
+
+.theme-2{
+    background-color: var(--t2mainBg);
+    color: var(--t2dark_grayish_yellow);
+}
+
+.theme-3{
+    background-color: var(--t3mainBg);
+    color: var(--t3lightyellow);
 }
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin-bottom: 20px;
 }
+
 
 .theme-control{
     display: flex;
@@ -123,16 +136,28 @@ header{
 .calc-body{
     min-height: 500px;
     /* background-color: #fff; */
-    max-width: 380px;
+    max-width:400px;
 }
 
 .input-field{
     width: 100%;
     height: 90px;
-    background-color: var(--t1screenBg);
     padding: 20px;
     border-radius: 8px;
 }
+
+.home .input-field{
+    background-color: var(--t1screenBg);
+}
+
+.theme-2 .input-field{
+    background-color: var(--t2screenBg);
+}
+
+.theme-3 .input-field{
+    background-color: var(--t3screenBg);
+}
+
 
 .input-field input{
     width: 100%;
@@ -143,6 +168,14 @@ header{
     text-align: right;
     font-size: 32px;
     background-color: transparent;
+}
+
+.theme-2 .input-field input{
+    color: var(--t2dark_grayish_yellow);
+}
+
+.theme-3 .input-field input{
+    color: var(--t3lightyellow);
 }
 
 /* spinner remover */
@@ -164,8 +197,19 @@ input[type = number]{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(5,1fr);
     grid-gap:15px;
-    background-color: var(--t1screenBg);
     border-radius: 8px;
+}
+
+.home .calc-btns{
+    background-color: var(--t1screenBg);
+}
+
+.theme-2 .calc-btns{
+    background-color: var(--t2toggleBg);
+}
+
+.theme-3 .calc-btns{
+    background-color: var(--t3screenBg);
 }
 
 .calc-btns button{
@@ -174,13 +218,29 @@ input[type = number]{
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    transition: 0.05s all ease-in-out;
+}
+
+.home .calc-btns button{
     background-color: var(--t1light_grayish_orange);
     box-shadow: 0 3px 0 var(--t1grayish_orange);
 }
 
+.theme-2 .calc-btns button{
+    background-color: var(--t2grayish-yellow);
+    box-shadow: 0 3px 0 var(--t2grayish-orange);
+}
+
+.theme-3 .calc-btns button{
+    background-color: var(--t3dark-violet);
+    box-shadow: 0 3px 0 var(--t3magenta);
+}
+
+
+
 .calc-btns button:active{
     box-shadow: none;
-    top:5px;
+    top: 8px;
 }
 
 .del,.reset,.equal{
@@ -196,11 +256,31 @@ input[type = number]{
     box-shadow: 0 3px 0 var(--t1keyShadow);
 }
 
+.theme-2 .del{
+    background-color: var(--t2keyBg);
+    box-shadow: 0 3px 0 var(--t2keyShadow);
+}
+
+.theme-3 .del{
+    background-color: var(--t3keyBg);
+    box-shadow: 0 3px 0 var(--t3keyShadow);
+}
+
 .reset{
     grid-column: 1 / 3;
     grid-row: 5 / 6 ;
     background-color: var(--t1keyBg);
     box-shadow: 0 3px 0 var(--t1keyShadow);
+}
+
+.theme-2 .reset{
+    background-color: var(--t2keyBg);
+    box-shadow: 0 3px 0 var(--t2keyShadow);
+}
+
+.theme-3 .reset{
+    background-color: var(--t3keyBg);
+    box-shadow: 0 3px 0 var(--t3keyShadow);
 }
 
 .equal {
@@ -210,7 +290,16 @@ input[type = number]{
     box-shadow: 0 3px 0 var(--t1darkRed);
 }
 
+.theme-2 .equal{
+     background-color: var(--t2orange);
+    box-shadow: 0 3px 0 var(--t2darkOrange);
+}
 
+.theme-3 .equal{
+     background-color: var(--t3pureCyan);
+     box-shadow: 0 3px 0 var(--t3softCyan);
+    color: black;
+}
 
 
 
