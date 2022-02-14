@@ -106,6 +106,7 @@ header{
 .theme-control{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -114,28 +115,52 @@ header{
     font-size: 10px;
 }
 
-.theme-btn{
-    
-}
-
-.theme-btn div {
-    background-color:red;
-    height: 20px;
-    width: 50px;
+.theme-btn {
+    background-color: var(--t1screenBg);
     border-radius: 30px;
-    padding: 3px;
+    padding: 4px;
+    position:relative;
 }
 
+.items{
+    position: absolute;
+    width: 85%;
+    bottom:100%;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.items button{
+   border: none;
+   padding: 0 3px;
+   cursor: pointer;
+   background-color: transparent;
+   color: inherit;
+   font-weight: bold;
+}
+
+.rounded {
+    display: flex;
+    gap:3px;
+    align-items: center;
+    justify-content: center;
+}
  .rounded div {
-    height: 13px;
-    width: 13px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
-    background-color: yellow;
+    cursor: pointer;
+    visibility: hidden;
 }
 
+.rounded div.active{
+    visibility: visible;
+    background-color: var(--t1red);
+}
 .calc-body{
     min-height: 500px;
-    /* background-color: #fff; */
     max-width:400px;
 }
 
@@ -301,8 +326,12 @@ input[type = number]{
     color: black;
 }
 
-
-
+.theme-2 .rounded div.active{
+    background-color: var(--t2orange);
+}
+.theme-3 .rounded div.active{
+    background-color: var(--t3pureCyan);
+}
 
 
 
